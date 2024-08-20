@@ -73,8 +73,8 @@ h1, #start h3, #start p{
 }
 
 #myBtn:hover {
-    background: #c66a6a;
-    color: black;
+    background: #a11e1e;
+    color: rgb(255, 255, 255);
 }
 
 .news{
@@ -85,29 +85,85 @@ h1, #start h3, #start p{
     flex-direction: row;
 }
 
-.post{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 120px 30px 10px 30px;
-    max-width: 400px;
-    max-height: 600px;
-    background-color: #cdc9ff23;
-    overflow: hidden;
+.news-content {
+    background-color: #290066;
+    color: #f8f8ff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
 }
 
-img{
-    max-width: 900px;
-    max-height: 900px;
-    object-fit: cover;
-    margin: -100px;
-    margin-top: -250px;
+.news-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
-.post h2{
-    margin-top: -50%;
+
+.news-content p {
+    margin-bottom: 15px;
+}
+
+.news-content button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.news-content button:hover {
+    background-color: #ff6347;
+}
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 90px 15px;
+    max-width: 350px;
+    min-height: 450px;
+    background-color: #1F0078;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
+    color: #FFDDC1;
+}
+
+.post p {
+    font-size: 1rem;
+    text-align: center;
+    color: #D8D8D8;
+    margin-top: auto;
+}
+
+.video{
+    width: 860px;
+    height: 470px;
 }
 
 .wrap{
@@ -123,4 +179,17 @@ footer{
     align-items: center;
     padding: 10px;
     margin: 50px;
+}
+
+@media (max-width:768px){
+    #start h3{
+        display: none;
+    }
+    #myBtn{
+        margin: 2%;
+        font-size: 12px;
+    }
+    .video{
+        width: 94%;
+    }
 }
